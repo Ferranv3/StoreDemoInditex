@@ -31,13 +31,6 @@ This Spring Boot project implements a pricing service for an e-commerce platform
         - brandId - The ID of the brand.
     - Description: Retrieves the applicable price for a given product and brand on a specific date.
 
-## Testing
-Run the following command to execute unit and integration tests:
-
-```bash
-mvn test
-```
-
 ## Installation and Running the Application
 Clone the Repository:
 ```bash
@@ -57,9 +50,15 @@ Run the Application:
 mvn spring-boot:run
 ```
 
+## Testing
+Run the following command to execute unit and integration tests:
+
+```bash
+mvn test
+```
+
 ## License
 MIT License or specify another license.
 
 ## Contact
-Developer: Your Name
-Email: your.email@example.com
+- Developer: Ferran Hernandez Prunera
