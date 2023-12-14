@@ -2,11 +2,11 @@ package com.dddproject.store.application.service;
 
 import com.dddproject.store.domain.model.Price;
 import com.dddproject.store.domain.exception.PriceNotFoundException;
-import com.dddproject.store.infrastructure.mapper.PriceMapper;
-import com.dddproject.store.infrastructure.mapper.PriceResponseMapper;
+import com.dddproject.store.infrastructure.mapper.price.PriceMapper;
+import com.dddproject.store.infrastructure.mapper.price.PriceResponseMapper;
 import com.dddproject.store.infrastructure.persistence.entity.PriceEntity;
 import com.dddproject.store.infrastructure.persistence.repository.SpringDataPriceRepository;
-import com.dddproject.store.infrastructure.web.dto.PriceResponseDto;
+import com.dddproject.store.infrastructure.web.dto.price.PriceResponseDto;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

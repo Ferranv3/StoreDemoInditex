@@ -2,8 +2,9 @@ package com.dddproject.store.infrastructure.web.controller;
 
 import com.dddproject.store.application.port.in.PriceQueryService;
 import com.dddproject.store.domain.model.Price;
-import com.dddproject.store.infrastructure.mapper.PriceResponseMapper;
-import com.dddproject.store.infrastructure.web.dto.PriceResponseDto;
+import com.dddproject.store.infrastructure.mapper.price.PriceResponseMapper;
+import com.dddproject.store.infrastructure.web.dto.price.PriceResponseDto;
+import com.dddproject.store.infrastructure.web.dto.price.PriceRequestDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,6 +36,12 @@ public class PriceController {
                                                      @RequestParam Long productId,
                                                      @RequestParam Long brandId) {
         Price price = priceQueryService.findApplicablePrice(date, productId, brandId);
+        return ResponseEntity.ok(priceResponseMapper.convertToDto(price));
+    }
+
+    @GetMapping("/price")
+    public ResponseEntity<PriceResponseDto> getPrice(@RequestParam PriceRequestDto priceRequestDto) {
+        Price price = priceQueryService.findApplicablePrice(priceRequestDto.getDate(), priceRequestDto.getProductId(), priceRequestDto.getBrandId());
         return ResponseEntity.ok(priceResponseMapper.convertToDto(price));
     }
 }

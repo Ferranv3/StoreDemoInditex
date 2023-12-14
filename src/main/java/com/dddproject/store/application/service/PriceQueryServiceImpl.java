@@ -4,7 +4,7 @@ import com.dddproject.store.application.port.in.PriceQueryService;
 import com.dddproject.store.application.port.out.PriceRepository;
 import com.dddproject.store.domain.exception.PriceNotFoundException;
 import com.dddproject.store.domain.model.Price;
-import com.dddproject.store.infrastructure.mapper.PriceMapper;
+import com.dddproject.store.infrastructure.mapper.price.PriceMapper;
 import com.dddproject.store.infrastructure.persistence.entity.PriceEntity;
 import org.springframework.stereotype.Service;
 

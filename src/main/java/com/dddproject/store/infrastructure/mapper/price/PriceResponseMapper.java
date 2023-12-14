@@ -1,7 +1,7 @@
-package com.dddproject.store.infrastructure.mapper;
+package com.dddproject.store.infrastructure.mapper.price;
 
 import com.dddproject.store.domain.model.Price;
-import com.dddproject.store.infrastructure.web.dto.PriceResponseDto;
+import com.dddproject.store.infrastructure.web.dto.price.PriceResponseDto;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -12,8 +12,8 @@ public class PriceResponseMapper {
 
     public PriceResponseDto convertToDto(Price price) {
         PriceResponseDto dto = new PriceResponseDto();
-        dto.setProductId(price.getProductId());
-        dto.setBrandId(price.getBrandId());
+        dto.setProductId(price.getProduct().getProductId());
+        dto.setBrandId(price.getBrand().getId());
         dto.setPriceList(price.getPriceList());
         dto.setStartDate(price.getStartDate());
         dto.setEndDate(price.getEndDate());

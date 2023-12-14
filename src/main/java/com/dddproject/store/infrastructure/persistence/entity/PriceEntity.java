@@ -27,8 +27,9 @@ public class PriceEntity {
     @Column(name = "PRICE_LIST")
     private Long priceList;
 
-    @Column(name = "PRODUCT_ID")
-    private Long productId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "PRODUCT_ID")
+    private ProductEntity productId;
 
     private Integer priority;
 

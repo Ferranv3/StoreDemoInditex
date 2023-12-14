@@ -11,6 +11,9 @@ import java.util.List;
 
 @Repository
 public interface SpringDataPriceRepository extends JpaRepository<PriceEntity, Long>, PriceRepository {
-    @Query("SELECT p FROM PriceEntity p WHERE p.productId = :productId AND p.brandId.id = :brandId AND :date BETWEEN p.startDate AND p.endDate ORDER BY p.priority DESC")
+    @Query("SELECT p FROM PriceEntity p"
+            + " WHERE p.productId.id = :productId AND p.brandId.id = :brandId"
+            + " AND :date BETWEEN p.startDate AND p.endDate"
+            + " ORDER BY p.priority DESC")
     List<PriceEntity> findApplicablePrices(Long productId, Long brandId, LocalDateTime date);
 }

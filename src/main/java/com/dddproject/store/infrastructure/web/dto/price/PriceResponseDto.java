@@ -1,4 +1,4 @@
-package com.dddproject.store.infrastructure.web.dto;
+package com.dddproject.store.infrastructure.web.dto.price;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
