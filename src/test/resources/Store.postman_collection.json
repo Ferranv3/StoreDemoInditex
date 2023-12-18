@@ -72,6 +72,51 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Get unexisting applicable price",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "date",
+							"value": "2020-06-14T10:00:00",
+							"type": "default"
+						},
+						{
+							"key": "productId",
+							"value": "35452",
+							"type": "default"
+						},
+						{
+							"key": "brandId",
+							"value": "1",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/prices/applicable",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"prices",
+						"applicable"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
