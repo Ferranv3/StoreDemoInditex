@@ -2,9 +2,7 @@ package com.dddproject.store.application.service;
 
 import com.dddproject.store.domain.model.Price;
 import com.dddproject.store.domain.exception.PriceNotFoundException;
-import com.dddproject.store.infrastructure.mapper.price.PriceResponseMapper;
 import com.dddproject.store.infrastructure.persistence.repository.PricePersistenceAdapter;
-import com.dddproject.store.infrastructure.web.dto.price.PriceResponseDto;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -33,7 +31,6 @@ class PriceQueryServiceImplTest {
     void testFindPriceAt10h14thFor35455Product() {
         LocalDateTime testDate = LocalDateTime.of(2023, 6, 14, 10, 0);
         Price mockPrice = new Price();
-        PriceResponseDto mockPriceResponse = new PriceResponseDto();
 
         when(pricePersistenceAdapter.findApplicablePrices(productId, brandId, testDate))
                 .thenReturn(Collections.singletonList(mockPrice));
@@ -62,7 +59,6 @@ class PriceQueryServiceImplTest {
     void testFindPriceAt21h14thFor35455Product() {
         LocalDateTime testDate = LocalDateTime.of(2023, 6, 14, 21, 0);
         Price mockPrice = new Price();
-        PriceResponseDto mockPriceResponse = new PriceResponseDto();
 
         when(pricePersistenceAdapter.findApplicablePrices(productId, brandId, testDate))
                 .thenReturn(Collections.singletonList(mockPrice));
@@ -77,7 +73,6 @@ class PriceQueryServiceImplTest {
     void testFindPriceAt10h15thFor35455Product() {
         LocalDateTime testDate = LocalDateTime.of(2023, 6, 15, 10, 0);
         Price mockPrice = new Price();
-        PriceResponseDto mockPriceResponse = new PriceResponseDto();
 
         when(pricePersistenceAdapter.findApplicablePrices(productId, brandId, testDate))
                 .thenReturn(Collections.singletonList(mockPrice));
@@ -94,7 +89,6 @@ class PriceQueryServiceImplTest {
         Long productId = 35455L;
         Long brandId = 1L;
         Price mockPrice = new Price();
-        PriceResponseDto mockPriceResponse = new PriceResponseDto();
 
         when(pricePersistenceAdapter.findApplicablePrices(productId, brandId, testDate))
                 .thenReturn(Collections.singletonList(mockPrice));

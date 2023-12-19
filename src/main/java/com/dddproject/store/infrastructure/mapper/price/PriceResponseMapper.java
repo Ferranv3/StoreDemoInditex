@@ -12,8 +12,8 @@ public class PriceResponseMapper {
 
     public PriceResponseDto convertToDto(Price price) {
         PriceResponseDto dto = new PriceResponseDto();
-        dto.setProductId(price.getProduct().getProductId());
-        dto.setBrandId(price.getBrand().getId());
+        dto.setProductId(price.getProductId());
+        dto.setBrandId(price.getId());
         dto.setPriceList(price.getPriceList());
         dto.setStartDate(price.getStartDate());
         dto.setEndDate(price.getEndDate());

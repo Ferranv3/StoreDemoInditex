@@ -27,9 +27,8 @@ public class PriceEntity {
     @Column(name = "PRICE_LIST")
     private Long priceList;
 
-    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "PRODUCT_ID")
-    private ProductEntity productId;
+    private Long productId;
 
     private Integer priority;
 
@@ -38,7 +37,6 @@ public class PriceEntity {
     @Column(name = "CURR")
     private String currency;
 
-    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "BRAND_ID")
-    private BrandEntity brandId;
+    private Long brandId;
 }

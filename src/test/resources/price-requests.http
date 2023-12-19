@@ -1,7 +1,3 @@
-GET http://localhost:8080/api/v1/prices/all
-
-###
-
 GET http://localhost:8080/api/v1/prices/applicable
 Content-Type: application/json
 
@@ -10,3 +6,5 @@ Content-Type: application/json
   "productId": 35455,
   "brandId": 1
 }
+
+###
