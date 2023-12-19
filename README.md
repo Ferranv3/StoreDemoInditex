@@ -15,14 +15,11 @@ This Spring Boot project implements a pricing service for an e-commerce platform
 - H2 Database - In-memory database.
 - JPA / Hibernate - For ORM and database interaction.
 - JUnit & Mockito - For unit and integration testing.
+- Cucumber - For e2e testing.
 - Maven - Dependency management and build tool.
 
 ## REST API Endpoints
-1. Get All Prices:
-    - Method: GET
-    - Endpoint: /api/v1/prices/all
-    - Description: Retrieves a list of all prices.
-2. Get Applicable Price:
+1. Get Applicable Price:
     - Method: GET
     - Endpoint: /api/v1/prices/applicable
     - Parameters:
@@ -34,7 +31,7 @@ This Spring Boot project implements a pricing service for an e-commerce platform
 ## Installation and Running the Application
 Clone the Repository:
 ```bash
-git clone https://github.com/Ferranv3/SpringBoot-DDD-Store.git
+git clone https://github.com/Ferranv3/StoreDemoInditex.git
 ```
 Navigate to the Project Directory:
 ```bash
@@ -56,9 +53,6 @@ Run the following command to execute unit and integration tests:
 ```bash
 mvn test
 ```
-
-## License
-MIT License or specify another license.
 
 ## Contact
 - Developer: Ferran Hernandez Prunera
