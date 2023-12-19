@@ -35,7 +35,7 @@ git clone https://github.com/Ferranv3/StoreDemoInditex.git
 ```
 Navigate to the Project Directory:
 ```bash
-cd SpringBoot-DDD-Store
+cd StoreDemoInditex
 ```
 Build the Project with Maven:
 ```bash
