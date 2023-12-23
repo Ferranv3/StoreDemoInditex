@@ -47,6 +47,16 @@ Run the Application:
 mvn spring-boot:run
 ```
 
+## Docker
+Install Docker in your computer and build and run the app:
+```bash
+docker build -t store .
+```
+
+```bash
+docker run -p 8080:8080 store
+```
+
 ## Testing
 Run the following command to execute unit and integration tests:
 
